@@ -1,8 +1,16 @@
-
+import Welcome from "../Components/Welcome";
+import Login from "../Components/Login";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext.jsx";
 
 const HomePage = () => {
+
+  const { user } = useContext(AuthContext)
+
   return (
-    <div>Home</div>
+    <>
+        { user ? <Welcome userName={user} /> : <Login/>}       
+    </>
   );
 }
 

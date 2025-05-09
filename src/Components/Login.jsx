@@ -27,8 +27,7 @@ export default function Login() {
             setError("Credenciales incorrectas");
         }
         else
-        {
-            alert("Bienvenido" + email)    
+        {              
             setUser(email)        
         }
     }
